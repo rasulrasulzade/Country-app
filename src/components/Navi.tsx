@@ -7,7 +7,7 @@ const Navi = () => {
     <div>
       <Navbar bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Europe Countries</Navbar.Brand>
+          <Navbar.Brand href="#home">Countries</Navbar.Brand>
           <Nav className="mr-auto">
             <NavLink className="nav-link" to="/">Home</NavLink>
             <NavLink className="nav-link" to="/add-country">Add Country</NavLink>

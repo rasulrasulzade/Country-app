@@ -59,7 +59,7 @@
     {
       "name": "Azerbaijan",
       "capital": "Baku",
-      "area": "868812",
+      "area": 86600,
       "population": "10",
       "img": "https://www.thenational.ae/image/policy:1.716830:1522588673/GettyImages-170881144.jpg?f=16x9&w=1200&$p$f$w=bad6bfb",
       "id": 8
@@ -67,10 +67,154 @@
     {
       "name": "Finland",
       "capital": "Helsinki",
-      "area": "338440",
+      "area": 338440,
       "population": "6",
       "img": "https://specials-images.forbesimg.com/imageserve/1061449382/960x0.jpg?fit=scale",
       "id": 9
+    },
+    {
+      "name": "Switzerland",
+      "capital": "Bern",
+      "area": 41285,
+      "population": "9",
+      "img": "https://www.airpano.com/files/video_bern_01_big.jpg",
+      "id": 10
+    },
+    {
+      "name": "Croatia",
+      "capital": "Zagreb",
+      "area": 56594,
+      "population": "5",
+      "img": "https://content.r9cdn.net/rimg/dimg/d4/9a/123d277a-city-7964-164a8b5c3d0.jpg?crop=true&width=1000&height=600&xhint=1133&yhint=787",
+      "id": 12
+    },
+    {
+      "name": "Russia",
+      "capital": "Moscow",
+      "area": "17",
+      "population": "144",
+      "img": "https://www.planete-energies.com/sites/default/files/styles/media_full_width_940px/public/thumbnails/image/moscow.jpg?itok=J_vRU4rA",
+      "id": 14
+    },
+    {
+      "name": "Japan",
+      "capital": "Tokyo",
+      "area": "377915",
+      "population": "126",
+      "img": "https://www.pinsentmasons.com/-/media/images/hero/japan-1440.jpg?h=583&la=en-gb&w=1200&hash=86A3BD0ABC0BF66B247F94A1E9DED1F6",
+      "id": 17
+    },
+    {
+      "name": "South Korea",
+      "capital": "Seoul",
+      "area": "100210",
+      "population": "52",
+      "img": "https://www-s3-live.kent.edu/s3fs-root/s3fs-public/South%20Korea.jpg",
+      "id": 18
+    },
+    {
+      "name": "Albania",
+      "capital": "Tirana",
+      "area": "27400",
+      "population": "3",
+      "img": "https://www.interkultur.com/fileadmin/_processed_/b/1/csm_S-04-OnStageAlbania2020-AdobeStock_9838342784.jpg",
+      "id": 19
+    },
+    {
+      "name": "Georgia",
+      "capital": "Tbilisi",
+      "area": "69700",
+      "population": "8",
+      "img": "https://blog.radissonblu.com/wp-content/uploads/2015/09/Panoramic-view-of-Tbilisi-Georgia.jpg",
+      "id": 20
+    },
+    {
+      "name": "Norway",
+      "capital": "Oslo",
+      "area": "385207",
+      "population": "6",
+      "img": "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F880090210%2F0x0.jpg",
+      "id": 21
+    },
+    {
+      "name": "Iceland",
+      "capital": "Reykjavík",
+      "area": "103,000",
+      "population": "364,134",
+      "img": "https://blog.radissonblu.com/wp-content/uploads/2013/12/downtown-Reykjavik.jpg",
+      "id": 22
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "area": "505990",
+      "population": "6.642",
+      "img": "https://img.blogs.es/smartcitylab/wp-content/uploads/2019/07/dowtown-madrid-spain-1920x960.jpg",
+      "id": 23
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "area": "505990",
+      "population": "6.642",
+      "img": "https://img.blogs.es/smartcitylab/wp-content/uploads/2019/07/dowtown-madrid-spain-1920x960.jpg",
+      "id": 24
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "area": "505990",
+      "population": "6.642",
+      "img": "https://img.blogs.es/smartcitylab/wp-content/uploads/2019/07/dowtown-madrid-spain-1920x960.jpg",
+      "id": 25
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "area": "505990",
+      "population": "6.642",
+      "img": "https://img.blogs.es/smartcitylab/wp-content/uploads/2019/07/dowtown-madrid-spain-1920x960.jpg",
+      "id": 26
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "area": "505990",
+      "population": "6.642",
+      "img": "https://img.blogs.es/smartcitylab/wp-content/uploads/2019/07/dowtown-madrid-spain-1920x960.jpg",
+      "id": 27
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "area": "505990",
+      "population": "6.642",
+      "img": "https://img.blogs.es/smartcitylab/wp-content/uploads/2019/07/dowtown-madrid-spain-1920x960.jpg",
+      "id": 28
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "area": "505990",
+      "population": "6.642",
+      "img": "https://img.blogs.es/smartcitylab/wp-content/uploads/2019/07/dowtown-madrid-spain-1920x960.jpg",
+      "id": 29
+    },
+    {
+      "name": "Malta",
+      "capital": "Valletta",
+      "area": "316",
+      "population": "0.514",
+      "img": "https://financemalta.org/app/uploads/2019/08/iStock-1152812253-1200x1200.jpg",
+      "id": 30
+    },
+    {
+      "name": "Estonia",
+      "capital": "Talliinn",
+      "area": "45,227",
+      "population": "1.329",
+      "img": "https://tradewithestonia.com/wp-content/uploads/2695-tallinn-christmas-market-sergei-zjuganov-29988063-1800x1198.jpg",
+      "id": 31
     }
   ]
 }

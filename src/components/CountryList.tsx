@@ -6,7 +6,7 @@ import { getCountries, StoreState } from "../redux/actions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const CountryList = () => {
+const CountryList: React.FC = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state: StoreState) => state.countries);
   useEffect(() => {
@@ -14,9 +14,9 @@ const CountryList = () => {
   }, []);
   return (
     <>
-      {countries &&
+      {countries.length > 0 &&
         countries.map((country, index) => (
-          <Col xs={6} key={index} className="mb-4">
+          <Col xs={6} key={country.id} className="mb-4">
             <Card>
               <Card.Img
                 variant="top"

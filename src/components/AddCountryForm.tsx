@@ -1,16 +1,16 @@
 import React from "react";
-import {useDispatch} from "react-redux";
-import {useHistory} from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { Button, Col, FormControl } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-import { Country, addCountry} from "../redux/actions"
+import { Country, addCountry } from "../redux/actions";
 
 const AddCountryForm = () => {
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
 
-  const { register, handleSubmit, errors } = useForm(); 
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data: Country): void => {
     dispatch(addCountry(data));
     history.push("/");
@@ -45,7 +45,6 @@ const AddCountryForm = () => {
           <FormControl
             placeholder="Country's area"
             name="area"
-            type="number"
             ref={register({ required: true })}
           />
           {errors.area && (
@@ -57,7 +56,6 @@ const AddCountryForm = () => {
           <FormControl
             placeholder="Country's population"
             name="population"
-            type="number"
             ref={register({ required: true })}
           />
           {errors.population && (
@@ -75,7 +73,7 @@ const AddCountryForm = () => {
             <span className="text-danger">Img URL is required.</span>
           )}
         </div>
-        
+
         <Button className="mt-2 d-block w-100" type="submit">
           Submit
         </Button>

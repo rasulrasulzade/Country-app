@@ -42,7 +42,7 @@ const addCountrySuccess = (country: Country): AddCountrySuccessAction => {
 export function* addCountrySaga(action: AddCountryAction) {
   const url: string = "http://localhost:3002/countries";
   try {
-    const data = yield call(postDataToApi, {url: url, data: action.payload})
+    const data = yield call(postDataToApi, {url: url, country: action.payload})
     yield put(addCountrySuccess(data))
   } catch(e) {
     console.log(e)

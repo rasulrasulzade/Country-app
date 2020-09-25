@@ -4,8 +4,8 @@ export interface Country {
   id: number;
   name: string;
   capital: string;
-  area: number;
-  population: number;
+  area: string;
+  population: string;
   img: string;
 }
 
