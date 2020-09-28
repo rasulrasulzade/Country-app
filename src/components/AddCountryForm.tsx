@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Button, Col, FormControl } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
@@ -8,13 +8,15 @@ import { Country, addCountry } from "../redux/actions";
 
 const AddCountryForm = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const [redirect, setRedirect] = useState(false);
 
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data: Country): void => {
+  const onSubmit = (data: Country) => {
     dispatch(addCountry(data));
-    history.push("/");
+    setRedirect(true);
   };
+
+  if (redirect) return <Redirect to="/" />;
 
   return (
     <Col className="mx-auto" xs={7}>
@@ -81,5 +83,4 @@ const AddCountryForm = () => {
     </Col>
   );
 };
-
 export default AddCountryForm;

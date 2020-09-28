@@ -1,9 +1,9 @@
 import { Country } from "./interfaces";
 
 
-export const postDataToApi = async ({url, country}: {url: string, country: Country}): Promise<any> => {
+export const postDataToApi = async ({url, country}: {url: string, country: Country}): Promise<Country | string> => {
   try {
-    const response = await fetch(url, {
+    const response: Response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -11,9 +11,14 @@ export const postDataToApi = async ({url, country}: {url: string, country: Count
       body: JSON.stringify(country),
     });
 
+    if(!response.ok){
+      const resData:{message:string}=await response.json();
+      throw new Error(resData.message);
+    }
+
     const data: Country = await response.json();
     return data;
   } catch (error) {
-    console.log(error);
+    return error;
   }
-};
+}
