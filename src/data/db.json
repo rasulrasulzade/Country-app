@@ -215,6 +215,38 @@
       "population": "1.329",
       "img": "https://tradewithestonia.com/wp-content/uploads/2695-tallinn-christmas-market-sergei-zjuganov-29988063-1800x1198.jpg",
       "id": 31
+    },
+    {
+      "name": "Canada",
+      "capital": "Ottawa",
+      "area": "7351524821",
+      "population": "092379828",
+      "img": "https://media.nomadicmatt.com/canadaguide.jpg",
+      "id": 32
+    },
+    {
+      "name": "Mexico",
+      "capital": "Mexico City",
+      "area": "23441",
+      "population": "2141",
+      "img": "https://media.worldnomads.com/travel-safety/mexico/mexico-city-and-flag-gettyimages-638921947.jpg",
+      "id": 33
+    },
+    {
+      "name": "Brazil",
+      "capital": "Brasilia",
+      "area": "1231",
+      "population": "12313",
+      "img": "https://www.atlanticyachtandship.ru/wp-content/uploads/2017/06/13-Brazil.jpg",
+      "id": 34
+    },
+    {
+      "name": "Argentina",
+      "capital": "Boenos Aires",
+      "area": "2.78",
+      "population": "44.49",
+      "img": "https://www.telegraph.co.uk/content/dam/Travel/2019/November/argie-GettyImages-539288446-xlarge.jpg",
+      "id": 35
     }
   ]
 }

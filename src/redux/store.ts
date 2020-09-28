@@ -1,13 +1,15 @@
-import {
-  combineReducers,
-  createStore,
-  applyMiddleware,
-} from "redux";
+import { combineReducers, createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { all, takeLatest } from "redux-saga/effects";
+import { configureStore } from "@reduxjs/toolkit";
 
-import { ActionTypes, StoreState, getCountriesSaga, addCountrySaga } from "./actions";
-import countriesReducer from "./reducers/countriesReducer";
+import {
+  ActionTypes,
+  StoreState,
+  getCountriesSaga,
+  addCountrySaga,
+} from "./actions";
+import countriesReducer from "./countrySlice";
 
 function* rootSaga() {
   yield all([
@@ -21,11 +23,14 @@ const rootReducer = combineReducers<StoreState>({
 });
 
 const sagaMiddleware = createSagaMiddleware();
+const middlewares = [sagaMiddleware];
 
-const configureStore = () => {
-  const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+const configureAppStore = () => {
+  const store = configureStore({
+    reducer: rootReducer,
+    middleware: [...middlewares],
+  });
   sagaMiddleware.run(rootSaga);
   return store;
-
 };
-export default configureStore;
+export default configureAppStore;

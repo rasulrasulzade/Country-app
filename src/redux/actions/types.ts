@@ -1,4 +1,4 @@
-import { GetCountriesSuccessAction, AddCountrySuccessAction} from "./interfaces";
+import { Country } from "./interfaces";
 
 export enum ActionTypes {
   FETCH_COUNTRIES_REQUESTED = "FETCH_COUNTRIES_REQUESTED",
@@ -7,4 +7,4 @@ export enum ActionTypes {
   ADD_COUNTRY_SUCCESS = "ADD_COUNTRY_SUCCESS",
 }
 
-export type Action = GetCountriesSuccessAction | AddCountrySuccessAction;
+export type Action = { type: string; payload: Country[] | Country };
