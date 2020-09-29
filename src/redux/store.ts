@@ -1,4 +1,4 @@
-import { combineReducers, createStore, applyMiddleware } from "redux";
+import { combineReducers } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { all, takeLatest } from "redux-saga/effects";
 import { configureStore } from "@reduxjs/toolkit";
@@ -14,6 +14,7 @@ import countriesReducer from "./countrySlice";
 function* rootSaga() {
   yield all([
     takeLatest(ActionTypes.FETCH_COUNTRIES_REQUESTED, getCountriesSaga),
+    takeLatest(ActionTypes.FETCH_SELECTED_COUNTRY_REQUESTED, getCountriesSaga),
     takeLatest(ActionTypes.ADD_COUNTRY_REQUESTED, addCountrySaga),
   ]);
 }

@@ -13,6 +13,11 @@ export interface GetCountriesAction {
   type: ActionTypes.FETCH_COUNTRIES_REQUESTED;
 }
 
+export interface GetSelectedCountryAction {
+  type: string,
+  payload: string,
+}
+
 export interface AddCountryAction {
   type: ActionTypes.ADD_COUNTRY_REQUESTED,
   payload: Country

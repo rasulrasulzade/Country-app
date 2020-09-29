@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Col, Card, Button } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 import { getCountries, StoreState } from "../redux/actions";
 
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const CountryList: React.FC = () => {
   const dispatch = useDispatch();
@@ -14,8 +14,8 @@ const CountryList: React.FC = () => {
   }, []);
   return (
     <>
-      {countries.length > 0 &&
-        countries.map((country, index) => (
+      {countries.length > 0 ?
+        countries.map((country) => (
           <Col xs={6} key={country.id} className="mb-4">
             <Card>
               <Card.Img
@@ -28,11 +28,11 @@ const CountryList: React.FC = () => {
                 <Card.Text>Capital: {country.capital}</Card.Text>
                 <Card.Text>Area: {country.area} km²</Card.Text>
                 <Card.Text>Population: {country.population} million</Card.Text>
-                <Button variant="primary">Go {country.name}</Button>
+                <Link className="btn btn-primary" to={`/countries/${country.id}`}>Go {country.name}</Link>
               </Card.Body>
             </Card>
           </Col>
-        ))}
+        )): "LOADING..."}
     </>
   );
 };
