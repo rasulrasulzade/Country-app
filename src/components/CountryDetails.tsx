@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Col } from "react-bootstrap";
 import { AiOutlineAreaChart } from "react-icons/ai";
@@ -6,12 +7,12 @@ import { MdPeopleOutline } from "react-icons/md";
 
 import { Country, getSelectedCountry, StoreState } from "../redux/actions";
 
-const CountryDetails: React.FC = (props) => {
+const CountryDetails: React.FC = () => {
   const dispatch = useDispatch();
-  const countryId = props.match.params.id;
-  const country: Country = useSelector((state: StoreState) => state.countries);
+  let { id }: { id: string } = useParams();
+  const country: Country | Country[] = useSelector((state: StoreState) => state.countries);
   useEffect(() => {
-    dispatch(getSelectedCountry(countryId));
+    dispatch(getSelectedCountry(id));
   }, []);
   return (
     <>
