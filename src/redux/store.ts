@@ -4,18 +4,17 @@ import { all, takeLatest } from "redux-saga/effects";
 import { configureStore } from "@reduxjs/toolkit";
 
 import {
-  ActionTypes,
   StoreState,
-  getCountriesSaga,
+  fetchCountriesSaga,
   addCountrySaga,
 } from "./actions";
 import countriesReducer from "./countrySlice";
+import {fetchCountries, addCountry} from "./countrySlice";
 
 function* rootSaga() {
   yield all([
-    takeLatest(ActionTypes.FETCH_COUNTRIES_REQUESTED, getCountriesSaga),
-    takeLatest(ActionTypes.FETCH_SELECTED_COUNTRY_REQUESTED, getCountriesSaga),
-    takeLatest(ActionTypes.ADD_COUNTRY_REQUESTED, addCountrySaga),
+    takeLatest(fetchCountries, fetchCountriesSaga),
+    takeLatest(addCountry, addCountrySaga),
   ]);
 }
 

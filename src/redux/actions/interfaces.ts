@@ -1,5 +1,3 @@
-import { ActionTypes } from "./types";
-
 export interface Country {
   id: number;
   name: string;
@@ -10,7 +8,7 @@ export interface Country {
 }
 
 export interface GetCountriesAction {
-  type: ActionTypes.FETCH_COUNTRIES_REQUESTED;
+  type: string;
 }
 
 export interface GetSelectedCountryAction {
@@ -19,7 +17,7 @@ export interface GetSelectedCountryAction {
 }
 
 export interface AddCountryAction {
-  type: ActionTypes.ADD_COUNTRY_REQUESTED,
+  type: string,
   payload: Country
 }
 

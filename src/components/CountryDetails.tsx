@@ -5,14 +5,15 @@ import { Col } from "react-bootstrap";
 import { AiOutlineAreaChart } from "react-icons/ai";
 import { MdPeopleOutline } from "react-icons/md";
 
-import { Country, getSelectedCountry, StoreState } from "../redux/actions";
+import { Country, StoreState } from "../redux/actions";
+import { fetchCountries } from "../redux/countrySlice";
 
 const CountryDetails: React.FC = () => {
   const dispatch = useDispatch();
   let { id }: { id: string } = useParams();
   const country: Country | Country[] = useSelector((state: StoreState) => state.countries);
   useEffect(() => {
-    dispatch(getSelectedCountry(id));
+    dispatch(fetchCountries(id));
   }, []);
   return (
     <>

@@ -6,14 +6,25 @@ const countrySlice = createSlice({
   name: "countries",
   initialState: [],
   reducers: {
-    fetchCountries(state: StoreState, action: Action): Country[] {
+    fetchCountries(state, action: Action): any {
       return action.payload;
     },
-    addCountrySuccess(state: StoreState, action: Action): Country[] {
+    fetchCountriesSuccess(state, action: Action): any {
+      return action.payload;
+    },
+    addCountry(state, action: Action): any {
+      return [...state, action.payload];
+    },
+    addCountrySuccess(state, action: Action): any {
       return [...state, action.payload];
     },
   },
 });
 
-export const { fetchCountries, addCountrySuccess } = countrySlice.actions;
+export const {
+  fetchCountries,
+  fetchCountriesSuccess,
+  addCountry,
+  addCountrySuccess,
+} = countrySlice.actions;
 export default countrySlice.reducer;

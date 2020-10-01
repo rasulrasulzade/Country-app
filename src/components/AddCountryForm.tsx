@@ -4,7 +4,8 @@ import { Redirect } from "react-router-dom";
 import { Button, Col, FormControl } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-import { Country, addCountry } from "../redux/actions";
+import { Country } from "../redux/actions";
+import { addCountry } from "../redux/countrySlice";
 
 const AddCountryForm = () => {
   const dispatch = useDispatch();
